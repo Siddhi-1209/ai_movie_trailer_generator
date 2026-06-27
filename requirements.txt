@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+moviepy
+Pillow
+opencv-python
+numpy
+requests
+gtts
+python-dotenv
