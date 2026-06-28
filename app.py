@@ -75,7 +75,7 @@ async def generate_voice():
         voice="en-US-GuyNeural"
     )
 
-    await communicate.save("/content/sample_data/trailer_voice.mp3")
+    await communicate.save("trailer_voice.mp3")
 
 await generate_voice()
 
