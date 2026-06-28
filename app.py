@@ -128,15 +128,15 @@ st.write("MoviePy imported successfully!")
 from PIL import Image
 
 for img_file in [
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg",
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg",
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg"
+    "WhatsApp Image 2026-06-27 at 13.34.38.jpeg",
+    "WhatsApp Image 2026-06-27 at 13.35.34.jpeg",
+    "WhatsApp Image 2026-06-27 at 13.34.38.jpeg"
 ]:
     img = Image.open(img_file)
   st.write(img_file, img.size)
 from moviepy.editor import AudioFileClip
 
-audio = AudioFileClip("/content/sample_data/trailer_voice.mp3")
+audio = AudioFileClip("trailer_voice.mp3")
 
 st.write("Duration:", audio.duration)
 from moviepy.editor import (
@@ -146,15 +146,15 @@ from moviepy.editor import (
 )
 
 # Load narration
-audio = AudioFileClip("/content/sample_data/trailer_voice.mp3")
+audio = AudioFileClip("trailer_voice.mp3")
 
 # Calculate duration per scene
 scene_duration = audio.duration / 3
 
 # Create image clips
-clip1 = ImageClip("/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg").set_duration(scene_duration)
-clip2 = ImageClip("/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg").set_duration(scene_duration)
-clip3 = ImageClip("/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg").set_duration(scene_duration)
+clip1 = ImageClip("WhatsApp Image 2026-06-27 at 13.34.38.jpeg").set_duration(scene_duration)
+clip2 = ImageClip("WhatsApp Image 2026-06-27 at 13.35.34.jpeg").set_duration(scene_duration)
+clip3 = ImageClip("WhatsApp Image 2026-06-27 at 13.36.16.jpeg").set_duration(scene_duration)
 
 # Combine clips
 video = concatenate_videoclips([clip1, clip2, clip3])
@@ -222,25 +222,25 @@ def zoom_out_effect(clip, zoom_ratio=0.04):
 )
 
 audio = AudioFileClip(
-    "/content/sample_data/trailer_voice.mp3"
+    "trailer_voice.mp3"
 )
 
 scene_duration = audio.duration / 3
 
 clip1 = ImageClip(
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg"
+    "WhatsApp Image 2026-06-27 at 13.34.38.jpeg"
 ).set_duration(scene_duration)
 
 clip1 = zoom_in_effect(clip1)
 
 clip2 = ImageClip(
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg"
+    "WhatsApp Image 2026-06-27 at 13.35.34.jpeg"
 ).set_duration(scene_duration)
 
 clip2 = zoom_out_effect(clip2)
 
 clip3 = ImageClip(
-    "/content/sample_data/WhatsApp Image 2026-06-27 at 13.36.16.jpeg"
+    "WhatsApp Image 2026-06-27 at 13.36.16.jpeg"
 ).set_duration(scene_duration)
 
 clip3 = zoom_in_effect(clip3)
